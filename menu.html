@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Point - Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@700&family=Jim+Nightshade&family=Inika&family=Libre+Bodoni&display=swap" rel="stylesheet">
+</head>
+<body class="body-menu">
+
+    <header class="navbar-mobile">
+        <div class="logo">Burger Point</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html" class="active">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="#" class="cart-icon" id="mobile-cart-icon">
+                🛒
+                <span class="cart-counter" id="mobile-cart-counter">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="content-center">
+            <header class="navbar-desktop">
+                <div class="logo">Burger Point</div>
+                <nav class="navbar-right">
+                    <a href="index.html">Home</a>
+                    <a href="menu.html" class="active">Menu</a>
+                    <a href="reservation.html">Reservation</a>
+                    <a href="#" class="cart-icon" id="desktop-cart-icon">
+                        🛒
+                        <span class="cart-counter" id="desktop-cart-counter">0</span>
+                    </a>
+                </nav>
+            </header>
+            <div class="tagline">
+                <span class="the-original-burger">OUR FULL MENU</span>
+            </div>
+            <h1>TASTY CHOICES</h1>
+            <p>Explore our wide selection of delicious burgers, fries, and drinks, all made with the freshest ingredients to satisfy your cravings.</p>
+        </div>
+    </main>
+
+    <section class="menu-items">
+        <div class="menu-category">
+            <h2>Chicken Burgers</h2>
+            <div class="menu-grid">
+                <div class="menu-card" data-id="Hot_Chicken">
+                    <img src="images/Spicy_Hot_Chicken.png" alt="Hot Chicken Burger">
+                    <div class="card-content">
+                        <h3>Hot Chicken Burger</h3>
+                        <div class="rating">⭐ 4.9</div>
+                        <div class="price">75 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Chicken_Cheese">
+                    <img src="images/Chicken Cheese.png" alt="Chicken Cheese Burger">
+                    <div class="card-content">
+                        <h3>Chicken Cheese Burger</h3>
+                        <div class="rating">⭐ 4.4</div>
+                        <div class="price">60 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Grilled_Chicken">
+                    <img src="images/Grilled_Chicken.png" alt="Grilled Chicken">
+                    <div class="card-content">
+                        <h3>Grilled Chicken</h3>
+                        <div class="rating">⭐ 4.8</div>
+                        <div class="price">80 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Crispy_Fried_Chicken">
+                    <img src="images/Fried_Chicken.png" alt="Crispy Fried Chicken">
+                    <div class="card-content">
+                        <h3>Crispy Fried Chicken</h3>
+                        <div class="rating">⭐ 4.8</div>
+                        <div class="price">78 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Veg_Chicken">
+                    <img src="images/veg burger.png" alt="Veg & Chicken Burger">
+                    <div class="card-content">
+                        <h3>Veg & Chicken Burger</h3>
+                        <div class="rating">⭐ 4.7</div>
+                        <div class="price">65 EGP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h2>Beef Burgers</h2>
+            <div class="menu-grid">
+                <div class="menu-card" data-id="Beef_Burger">
+                    <img src="images/beef_burger.png" alt="Beef Burger">
+                    <div class="card-content">
+                        <h3>Beef Burger</h3>
+                        <div class="rating">⭐ 4.8</div>
+                        <div class="price">90 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Mushroom">
+                    <img src="images/Mushroom.png" alt="Mushroom Burger">
+                    <div class="card-content">
+                        <h3>Mushroom Burger</h3>
+                        <div class="rating">⭐ 4.6</div>
+                        <div class="price">70 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Double_Cheesy">
+                    <img src="images/Double_Cheesy.png" alt="Double Cheese Burger">
+                    <div class="card-content">
+                        <h3>Double Cheese Burger</h3>
+                        <div class="rating">⭐ 4.5</div>
+                        <div class="price">110 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Black_Bean">
+                    <img src="images/Black_Bean.png" alt="Black Bean Burger">
+                    <div class="card-content">
+                        <h3>Black Bean Burger</h3>
+                        <div class="rating">⭐ 4.3</div>
+                        <div class="price">72 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="BBQ_Bacon">
+                    <img src="images/bbq.png" alt="BBQ Bacon Burger">
+                    <div class="card-content">
+                        <h3>BBQ Bacon Burger</h3>
+                        <div class="rating">⭐ 4.9</div>
+                        <div class="price">120 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Smoky">
+                    <img src="images/Smoked.png" alt="Smoky Burger">
+                    <div class="card-content">
+                        <h3>Smoky Burger</h3>
+                        <div class="rating">⭐ 4.7</div>
+                        <div class="price">85 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Double_Bacon">
+                    <img src="images/Double Bacon.png" alt="Double Bacon">
+                    <div class="card-content">
+                        <h3>Double Bacon</h3>
+                        <div class="rating">⭐ 4.8</div>
+                        <div class="price">130 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Avocado">
+                    <img src="images/Avocado Burger.png" alt="Avocado Burger">
+                    <div class="card-content">
+                        <h3>Avocado Burger</h3>
+                        <div class="rating">⭐ 4.7</div>
+                        <div class="price">95 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Fish">
+                    <img src="images/Fish Burger.png" alt="Fish Burger">
+                    <div class="card-content">
+                        <h3>Fish Burger</h3>
+                        <div class="rating">⭐ 4.5</div>
+                        <div class="price">70 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Vegan_Deluxe">
+                    <img src="images/Vegan Deluxe.png" alt="Vegan Deluxe">
+                    <div class="card-content">
+                        <h3>Vegan Deluxe</h3>
+                        <div class="rating">⭐ 4.8</div>
+                        <div class="price">88 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Texas_Style">
+                    <img src="images/Texas Style.png" alt="Texas Style">
+                    <div class="card-content">
+                        <h3>Texas Style</h3>
+                        <div class="rating">⭐ 4.6</div>
+                        <div class="price">105 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Classic_Cheeseburger">
+                    <img src="images/Classic Cheeseburger.png" alt="Classic Cheeseburger">
+                    <div class="card-content">
+                        <h3>Classic Cheeseburger</h3>
+                        <div class="rating">⭐ 4.9</div>
+                        <div class="price">80 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Ranch">
+                    <img src="images/Ranch Burger.png" alt="Ranch Burger">
+                    <div class="card-content">
+                        <h3>Ranch Burger</h3>
+                        <div class="rating">⭐ 4.7</div>
+                        <div class="price">92 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Sriracha">
+                    <img src="images/Sriracha Burger.png" alt="Sriracha Burger">
+                    <div class="card-content">
+                        <h3>Sriracha Burger</h3>
+                        <div class="rating">⭐ 4.6</div>
+                        <div class="price">95 EGP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-category">
+            <h2>Sides & Drinks</h2>
+            <div class="menu-grid">
+                <div class="menu-card" data-id="Classic_Fries">
+                    <img src="images/fries_1.png" alt="Classic Fries">
+                    <div class="card-content">
+                        <h3>Classic Fries</h3>
+                        <div class="rating">⭐ 4.5</div>
+                        <div class="price">30 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Cheese_Fries">
+                    <img src="images/fries_2.png" alt="Cheese Fries">
+                    <div class="card-content">
+                        <h3>Cheese Fries</h3>
+                        <div class="rating">⭐ 4.7</div>
+                        <div class="price">40 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Onion_Rings">
+                    <img src="images/onion_rings.png" alt="Onion Rings">
+                    <div class="card-content">
+                        <h3>Onion Rings</h3>
+                        <div class="rating">⭐ 4.4</div>
+                        <div class="price">35 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Coca_Cola">
+                    <img src="images/coke.png" alt="Coca Cola">
+                    <div class="card-content">
+                        <h3>Coca Cola</h3>
+                        <div class="rating">⭐ 4.9</div>
+                        <div class="price">20 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Pepsi">
+                    <img src="images/pepsi.png" alt="Pepsi">
+                    <div class="card-content">
+                        <h3>Pepsi</h3>
+                        <div class="rating">⭐ 4.8</div>
+                        <div class="price">20 EGP</div>
+                    </div>
+                </div>
+                <div class="menu-card" data-id="Juice">
+                    <img src="images/juice.png" alt="Orange Juice">
+                    <div class="card-content">
+                        <h3>Orange Juice</h3>
+                        <div class="rating">⭐ 4.6</div>
+                        <div class="price">25 EGP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>At Burger Point, we are dedicated to crafting the perfect burger experience. We use only the finest, freshest ingredients to create burgers that are juicy, flavorful, and unforgettable. Our passion for quality extends to every detail, from our hand-picked meats to our custom-made buns and signature sauces. We believe that a great burger is more than just food - it's a moment of pure satisfaction. Come and taste the difference!</p>
+        <p class="copyright">
+            © 2024 Burger Point. All rights reserved. | <br>Developed by <a href="https://wa.me/201020879511" target="_blank">Mazen Saydain</a></p>
+    </section>
+
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-ingredients" id="modal-ingredients"></p>
+            <div class="size-options" id="size-options">
+                <div class="size-option" data-size="single">
+                    <h4>Single</h4>
+                    <span class="modal-price" id="single-price"></span>
+                </div>
+                <div class="size-option" data-size="double">
+                    <h4>Double</h4>
+                    <span class="modal-price" id="double-price"></span>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="order-now-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 class="modal-title">Your Cart</h3>
+            <div class="cart-items" id="cart-items-container">
+            </div>
+            <div class="cart-total" id="cart-total">Total: <span>0 EGP</span></div>
+            <div class="cart-actions">
+                <a href="#" class="checkout-btn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 class="modal-title">Complete Your Order</h3>
+            <div class="checkout-form-container" id="checkout-form">
+                <div class="form-group">
+                    <label for="checkout-name">Name</label>
+                    <input type="text" id="checkout-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-address">Address</label>
+                    <input type="text" id="checkout-address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-phone">Phone number</label>
+                    <input type="tel" id="checkout-phone" name="phone" required>
+                </div>
+                <button type="submit" class="btn-submit" id="checkout-submit">Confirm the order</button>
+            </div>
+            <div class="success-message" style="display:none;">
+                <h3 style="color:#28a745;">Successfully completed!</h3>
+                <p>Your order has been received and will arrive within 35 minutes.</p>
+                <button class="btn-back-to-menu">Back to list</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Point - Reservation</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@700&family=Jim+Nightshade&family=Inika&family=Libre+Bodoni&display=swap" rel="stylesheet">
+</head>
+<body class="body-reservation">
+
+  <header class="navbar-mobile">
+    <div class="logo">Burger Point</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html" class="active">Reservation</a>
+      <a href="#" class="cart-icon" id="mobile-cart-icon">
+        🛒
+        <span class="cart-counter" id="mobile-cart-counter">0</span>
+      </a>
+    </nav>
+  </header>
+
+  <main class="hero-section">
+    <div class="content-center">
+      <header class="navbar-desktop">
+        <div class="logo">Burger Point</div>
+        <nav class="navbar-right">
+          <a href="index.html">Home</a>
+          <a href="menu.html">Menu</a>
+          <a href="reservation.html" class="active">Reservation</a>
+          <a href="#" class="cart-icon" id="desktop-cart-icon">
+            🛒
+            <span class="cart-counter" id="desktop-cart-counter">0</span>
+          </a>
+        </nav>
+      </header>
+      <div class="tagline">
+        <span class="the-original-burger">BOOK A TABLE</span>
+      </div>
+      <h1>RESERVE YOUR SPOT</h1>
+      <p>Easily reserve a table for you and your guests at Burger Point. We look forward to serving you the best burgers in town!</p>
+      <div class="reservation-form-container">
+        <div class="form-card">
+          <form class="reservation-form" id="reservation-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+              </div>
+              <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time" required>
+              </div>
+              <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" name="guests" placeholder="e.g., 2" min="1" required>
+              </div>
+            </div>
+            <button type="submit" class="btn-submit">Reserve Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="about-us">
+        <h2>About Burger Point</h2>
+        <p>At Burger Point, we believe that a great burger starts with great ingredients. We use 100% premium beef, fresh vegetables, and our secret family sauce to create a truly unforgettable experience. Our mission is to serve happiness, one burger at a time.</p>
+        <div class="contact-info">
+            <p><strong>Address:</strong> El-Horreya Street, Nasr City, Cairo</p>
+            <p><strong>Hotline:</strong> 19357</p>
+        </div>
+            <p class="copyright">
+              © 2024 Burger Point. All rights reserved. | <br>Developed by <a href="https://wa.me/201020879511" target="_blank">Mazen Saydain</a></p>
+        </footer>
+    
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-ingredients" id="modal-ingredients"></p>
+            <div class="size-options" id="size-options">
+                <div class="size-option" data-size="single">
+                    <h4>Single</h4>
+                    <span class="modal-price" id="single-price"></span>
+                </div>
+                <div class="size-option" data-size="double">
+                    <h4>Double</h4>
+                    <span class="modal-price" id="double-price"></span>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="order-now-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 class="modal-title">Your Cart</h3>
+            <div class="cart-items" id="cart-items-container">
+            </div>
+            <div class="cart-total" id="cart-total">Total: <span>0 EGP</span></div>
+            <div class="cart-actions">
+                <a href="#" class="checkout-btn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+  <script src="script.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyCCm7iE4_e5n_hE4BqJgE9_o8E4",
+      authDomain: "point-99772.firebaseapp.com",
+      projectId: "point-99772",
+      storageBucket: "point-99772.firebasestorage.app",
+      messagingSenderId: "735546724986",
+      appId: "1:735546724986:web:a349b38a2345803551a1c3",
+      measurementId: "G-E4P0HRKJYH"
+    };
+
+    // Init Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    const db = getFirestore(app);
+
+    // Handle Reservation Form
+    const form = document.getElementById("reservation-form");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phone = document.getElementById("phone").value;
+      const date = document.getElementById("date").value;
+      const time = document.getElementById("time").value;
+      const guests = document.getElementById("guests").value;
+
+      try {
+        await addDoc(collection(db, "reservations"), {
+          name,
+          email,
+          phone,
+          date,
+          time,
+          guests,
+          createdAt: new Date()
+        });
+        alert("Reservation successful!");
+        form.reset();
+      } catch (error) {
+        console.error("Error adding document: ", error);
+        alert("Reservation failed. Please try again.");
+      }
+    });
+  </script>
+</body>
+</html>

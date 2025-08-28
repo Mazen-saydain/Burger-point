@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Point</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@700&family=Jim+Nightshade&family=Inika&family=Libre+Bodoni&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar-mobile">
+        <div class="logo">Burger Point</div>
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservation</a>
+            <a href="#" class="cart-icon" id="mobile-cart-icon">
+                🛒
+                <span class="cart-counter" id="mobile-cart-counter">0</span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="hero-section">
+        <div class="content-left">
+            <header class="navbar-desktop">
+                <div class="logo">Burger Point</div>
+                <nav class="navbar-right">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="menu.html">Menu</a>
+                    <a href="reservation.html">Reservation</a>
+                    <a href="#" class="cart-icon" id="desktop-cart-icon">
+                        🛒
+                        <span class="cart-counter" id="desktop-cart-counter">0</span>
+                    </a>
+                </nav>
+            </header>
+            <div class="tagline">
+                <span class="the-original-burger">THE ORIGINAL BURGER</span>
+            </div>
+            <h1>SAVORY & DELICIOUS</h1>
+            <p>Delicious burger made high-taste New York beef, carefully processed to create a juicy and flavorful taste.</p>
+            <div class="buttons">
+                <a href="#" class="btn-explore">Explore Now</a>
+                <a href="menu.html" class="btn-see-menu">See Menu</a>
+            </div>
+        </div>
+        <div class="image-right">
+            <img src="images/delicious-burger.png" alt="Delicious Burger">
+        </div>
+    </main>
+
+    <section class="menu-items">
+        <div class="menu-grid">
+            <div class="menu-card" data-id="Hot_Chicken">
+                <img src="images/Spicy_Hot_Chicken.png" alt="Hot Chicken Burger">
+                <div class="card-content">
+                    <h3>Hot Chicken Burger</h3>
+                    <div class="rating">⭐ 4.9</div>
+                    <div class="price">75 EGP</div>
+                </div>
+            </div>
+            <div class="menu-card" data-id="Chicken_Cheese">
+                <img src="images/Chicken Cheese.png" alt="Chicken Cheese Burger">
+                <div class="card-content">
+                    <h3>Chicken Cheese Burger</h3>
+                    <div class="rating">⭐ 4.4</div>
+                    <div class="price">60 EGP</div>
+                </div>
+            </div>
+            <div class="menu-card" data-id="Veg_Chicken">
+                <img src="images/veg burger.png" alt="Veg & Chicken Burger">
+                <div class="card-content">
+                    <h3>Veg & Chicken Burger</h3>
+                    <div class="rating">⭐ 4.7</div>
+                    <div class="price">65 EGP</div>
+                </div>
+            </div>
+            <div class="menu-card" data-id="Beef_Burger">
+                <img src="images/beef_burger.png" alt="Beef Burger">
+                <div class="card-content">
+                    <h3>Beef Burger</h3>
+                    <div class="rating">⭐ 4.8</div>
+                    <div class="price">90 EGP</div>
+                </div>
+            </div>
+            <div class="menu-card" data-id="Mushroom">
+                <img src="images/Mushroom.png" alt="Mushroom Burger">
+                <div class="card-content">
+                    <h3>Mushroom Burger</h3>
+                    <div class="rating">⭐ 4.6</div>
+                    <div class="price">70 EGP</div>
+                </div>
+            </div>
+            <div class="menu-card" data-id="Double_Cheesy">
+                <img src="images/Double_Cheesy.png" alt="Double Cheese Burger">
+                <div class="card-content">
+                    <h3>Double Cheese Burger</h3>
+                    <div class="rating">⭐ 4.5</div>
+                    <div class="price">110 EGP</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>At Burger Point, we are dedicated to crafting the perfect burger experience. We use only the finest, freshest ingredients to create burgers that are juicy, flavorful, and unforgettable. Our passion for quality extends to every detail, from our hand-picked meats to our custom-made buns and signature sauces. We believe that a great burger is more than just food - it's a moment of pure satisfaction. Come and taste the difference!</p>
+        <p class="copyright">
+            © 2024 Burger Point. All rights reserved. | <br>Developed by <a href="https://wa.me/201020879511" target="_blank">Mazen Saydain</a></p>
+    </section>
+
+    <div class="modal-overlay" id="detail-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <img src="" alt="" class="modal-image" id="modal-image">
+            <h3 class="modal-title" id="modal-title"></h3>
+            <p class="modal-ingredients" id="modal-ingredients"></p>
+            <div class="size-options" id="size-options">
+                <div class="size-option" data-size="single">
+                    <h4>Single</h4>
+                    <span class="modal-price" id="single-price"></span>
+                </div>
+                <div class="size-option" data-size="double">
+                    <h4>Double</h4>
+                    <span class="modal-price" id="double-price"></span>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="add-to-cart-btn">Add to Cart</button>
+                <button class="order-now-btn">Order Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 class="modal-title">Your Cart</h3>
+            <div class="cart-items" id="cart-items-container">
+            </div>
+            <div class="cart-total" id="cart-total">Total: <span>0 EGP</span></div>
+            <div class="cart-actions">
+                <a href="#" class="checkout-btn">Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="checkout-modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 class="modal-title">Complete Your Order</h3>
+            <div class="checkout-form-container" id="checkout-form">
+                <div class="form-group">
+                    <label for="checkout-name">Name</label>
+                    <input type="text" id="checkout-name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-address">Address</label>
+                    <input type="text" id="checkout-address" name="address" required>
+                </div>
+                <div class="form-group">
+                    <label for="checkout-phone">Phone number</label>
+                    <input type="tel" id="checkout-phone" name="phone" required>
+                </div>
+                <button type="submit" class="btn-submit" id="checkout-submit">Confirm the order</button>
+            </div>
+            <div class="success-message" style="display:none;">
+                <h3 style="color:#28a745;">Successfully completed!</h3>
+                <p>Your order has been received and will arrive within 35 minutes.</p>
+                <button class="btn-back-to-menu">Back to list</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
