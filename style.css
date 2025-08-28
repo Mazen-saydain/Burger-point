@@ -298,23 +298,22 @@ body {
 
 /* Reservation Form */
 .reservation-form-container {
-    max-width: 1100px; /* Increased width for larger card */
+    max-width: 800px; /* يمكن تعديل هذا ليكون أوسع أو أضيق حسب الرغبة في وضع الديسكتوب */
     margin: 0 auto;
     padding: 20px;
+    /* إلغاء الستايلات التي كانت تعطي شكل الكارت إذا كانت موجودة هنا */
+    box-shadow: none;
+    background-color: transparent;
+    border-radius: 0;
 }
 
 .form-card {
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
-    border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    padding: 40px; /* Increased padding for larger appearance */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #eee;
-}
-
-.form-card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    /* إلغاء الستايلات التي كانت تعطي شكل الكارت إذا كانت موجودة هنا */
+    padding: 30px; /* يمكن الاحتفاظ بحشوة أكبر لسطح المكتب */
+    background: #fff; /* يمكن أن تكون الخلفية بيضاء أو شفافة */
+    border-radius: 16px; /* يمكن الاحتفاظ بحواف دائرية أو إزالتها */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* ظل خفيف أو لا شيء */
+    border: 1px solid #eee; /* حدود خفيفة أو لا شيء */
 }
 
 .reservation-form {
@@ -1036,23 +1035,44 @@ body {
         right: 10px;
         font-size: 14px;
     }
+    
     .reservation-form-container {
-        padding: 15px;
-        max-width: 90%;
+        max-width: 100%;
+        padding: 0 15px;
+        box-shadow: none;
+        background-color: transparent;
+        border-radius: 0;
     }
+
     .form-card {
-        padding: 30px; /* Increased padding */
+        padding: 20px;
+        box-shadow: none;
+        background-color: transparent;
+        border: none;
     }
+    
     .form-row {
         flex-direction: column;
         gap: 15px;
     }
-    .form-group input {
-        padding: 12px; /* Increased padding for input fields */
-        font-size: 16px; /* Increased font size for readability */
+    
+    .form-group {
+        width: 100%;
+        min-width: unset;
     }
+
+    .form-group label {
+        font-size: 16px;
+    }
+
+    .form-group input {
+        padding: 12px;
+        font-size: 16px;
+    }
+    
     .btn-submit {
-        padding: 15px; /* Increased padding for the button */
-        font-size: 18px; /* Increased font size for the button */
+        padding: 15px;
+        font-size: 18px;
+        width: 100%;
     }
 }
