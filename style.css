@@ -1041,18 +1041,18 @@ body {
         max-width: 90%;
     }
     .form-card {
-        padding: 20px;
+        padding: 30px; /* Increased padding */
     }
     .form-row {
         flex-direction: column;
         gap: 15px;
     }
     .form-group input {
-        padding: 10px;
-        font-size: 14px;
+        padding: 12px; /* Increased padding for input fields */
+        font-size: 16px; /* Increased font size for readability */
     }
     .btn-submit {
-        padding: 12px;
-        font-size: 16px;
+        padding: 15px; /* Increased padding for the button */
+        font-size: 18px; /* Increased font size for the button */
     }
 }
